@@ -16,6 +16,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-[#1e1e1e08] px-4 md:px-0">
+    <section
+      id="modal"
+      class="min-h-screen hidden flex justify-center items-center bg-[#11111166] fixed z-50 top-0 bottom-0 left-0 right-0"
+    >
+      <div
+        class="w-[350px] text-center flex flex-col justify-center items-center gap-4 bg-white rounded-lg py-8"
+      >
+        <img class="w-[20%] mx-auto" src="images/congo.png" alt="" />
+        <h1 class="font-bold text-xl">Congratulations</h1>
+        <p>Your Purchase the product</p>
+        <button
+          id="close-modal"
+          class="px-8 py-3 bg-[#E527B2] text-white font-bold rounded-lg hover:bg-black duration-700"
+        >
+          Go Home
+        </button>
+      </div>
+    </section>
+
     <header class="bg-[#F9F6E2] h-[500px] pt-4">
       <!-- banner secstion  started-->
       <section class="flex flex-col md:flex-row max-w-6xl mx-auto items-center">
@@ -43,7 +62,7 @@
       </section>
     </header>
     <!-- main  -->
-    <main>
+    <main class="">
       <!-- calculate section and card started -->
       <section class="flex flex-col md:flex-row gap-4 max-w-6xl mx-auto pt-10">
         <div class="md:w-[75%]">
@@ -446,6 +465,7 @@
               </p>
             </div>
             <input
+              id="make-purchase"
               type="button"
               class="w-full bg-[#E527B2] text-white py-2 mt-4 rounded-lg cursor-pointer hover:bg-black duration-700 font-bold"
               value="Make Purchase"

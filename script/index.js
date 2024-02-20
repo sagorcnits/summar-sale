@@ -53,3 +53,23 @@ getElementId("apply").addEventListener("click", function () {
     alert('Sorry Cupon Code Invalid Please Try "SELL20"');
   }
 });
+
+// make purchase function
+
+getElementId("make-purchase").addEventListener("click", function () {
+  if (itemCount <= 0) {
+    alert("Please Select Item");
+  } else {
+    getElementId("modal").classList.remove("hidden");
+  }
+});
+
+// close modal
+getElementId("close-modal").addEventListener("click", function () {
+  getElementId("modal").classList.add("hidden");
+  setTextValue("total-price", "00");
+  setTextValue("total", "00");
+  setTextValue("discount", "00");
+  getElementId("item-list").innerText = "";
+  itemCount = 0;
+});
